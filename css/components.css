@@ -114,3 +114,22 @@ button:disabled {
 .close:hover {
     color: var(--color-error);
 }
+
+/* =================== Responsividade para Celular =================== */
+@media (max-width: 576px) {
+    form {
+        width: 95%;
+        padding: var(--space-2);
+        margin: auto;
+    }
+
+    input, select, textarea, button {
+        font-size: var(--font-size-sm);
+    }
+
+    .card {
+        width: 100%;
+        padding: var(--space-2);
+        box-sizing: border-box; /* garante que padding não quebre layout */
+    }
+}
