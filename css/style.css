@@ -27,13 +27,17 @@
 }
 
 /* =================== Layout Principal (Grid) =================== */
-.container {
+.container, .main-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr;  /* só uma coluna que ocupa 100% */
     gap: var(--space-3);
-    max-width: 1200px;
+    width: 100%;                 /* ocupa toda a tela */
+    max-width: 100%;             /* remove limite de 1200px */
     margin: 0 auto;
+    padding: var(--space-3);
+    box-sizing: border-box;
 }
+
 
 /* =================== Flexbox =================== */
 nav ul {
@@ -61,15 +65,18 @@ nav li ul {
 }
 
 /* =================== Formulários =================== */
-form {
-    max-width: 600px;
-    margin: 0 auto;
+.card, form {
+    width: 100%;       /* ocupa toda a tela */
+    max-width: 100%;   /* remove limite */
+    margin: 0 auto;    /* centraliza horizontalmente */
     background: var(--color-white);
     padding: var(--space-3);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     box-sizing: border-box;
 }
+
+
 
 fieldset {
     border: 1px solid var(--color-neutral);
