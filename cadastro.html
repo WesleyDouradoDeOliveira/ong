@@ -33,6 +33,7 @@
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
         }
 
         form fieldset {
@@ -44,15 +45,17 @@
             display: block;
             margin-top: 10px;
             font-weight: bold;
+            font-size: 1rem;
         }
 
-        form input, form select {
+        form input, form select, form textarea {
             width: 100%;
-            padding: 10px;
+            padding: 14px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 6px;
             box-sizing: border-box;
+            font-size: 1rem;
         }
 
         button.btn-primary {
@@ -61,7 +64,7 @@
             background-color: #007bff;
             color: white;
             border: none;
-            padding: 12px;
+            padding: 16px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 16px;
@@ -74,12 +77,13 @@
         /* Alerta de sucesso */
         .alert {
             display: none;
-            padding: 10px;
+            padding: 12px;
             background-color: #d4edda;
             color: #155724;
             border-radius: 5px;
             margin-bottom: 20px;
             text-align: center;
+            font-size: 1rem;
         }
 
         /* Responsivo para celular */
@@ -87,6 +91,12 @@
             .main-container {
                 padding: 20px;
                 margin: 0 10px;
+                width: 100%;
+            }
+
+            form input, form select, form textarea, button.btn-primary {
+                font-size: 1rem;
+                padding: 14px;
             }
         }
     </style>
