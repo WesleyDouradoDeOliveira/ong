@@ -61,7 +61,8 @@ nav li ul {
 /* =================== Formulários =================== */
 form {
     max-width: 600px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     background: var(--color-white);
     padding: var(--space-3);
     border-radius: 8px;
@@ -225,12 +226,15 @@ img {
 @media (max-width: 576px)  { 
     .container { grid-template-columns: 1fr; gap: var(--space-2); } 
     .card { width: 100%; padding: var(--space-2); box-sizing: border-box; }
-    form { width: 95%; padding: var(--space-2); margin: auto; }
+    form { width: 95%; padding: var(--space-2); margin: 0 auto; } /* full width */
     input, select, textarea, button { font-size: var(--font-size-sm); }
     h1, h2, h3 { font-size: calc(var(--font-size-lg) - 2px); }
     p { font-size: var(--font-size-sm); }
 }
-@media (max-width: 400px)  { .container { grid-template-columns: 1fr; } }
+@media (max-width: 400px)  { 
+    .container { grid-template-columns: 1fr; }
+    form { width: 98%; padding: var(--space-2); margin: 0 auto; } /* quase toda tela no celular menor */
+}
 
 /* =================== Navbar / Menu Hambúrguer =================== */
 @media (max-width: 992px) {
