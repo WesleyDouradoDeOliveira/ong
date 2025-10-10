@@ -6,7 +6,6 @@ Este projeto é uma plataforma web para ONGs, desenvolvido como parte da discipl
 
 ## Estrutura do Projeto
 
-```
 projeto-ong/
 │
 ├── index.html
@@ -14,18 +13,17 @@ projeto-ong/
 ├── cadastro.html
 │
 ├── css/
-│   └── style.css
+│ └── style.css
 │
 ├── js/
-│   └── mascara.js
+│ └── mascara.js
 │
 ├── imagens/
-│   ├── Ong.jpeg
-│   ├── Escola.jpeg
-│   └── voluntarios.png
+│ ├── Ong.jpeg
+│ ├── Escola.jpeg
+│ └── voluntarios.png
 │
 └── README.md
-```
 
 ## Funcionalidades
 
@@ -34,6 +32,7 @@ projeto-ong/
 * Página de cadastro com formulário HTML5, validação e máscaras de input para CPF, telefone e CEP.
 * Navegação responsiva entre páginas.
 * Layout limpo e acessível.
+* Interface estilizada com CSS3, utilizando **design system, grid e flexbox**, incluindo menu responsivo, cards para projetos, botões com estados visuais e formulários com validação.
 
 ## Tecnologias Utilizadas
 
@@ -48,6 +47,6 @@ Abra `index.html` no navegador.
 
 ## Autor
 
-Wesley Dourado de Oliveira
-📧 Email: [a30wesleyyy@gmail.com](mailto:a30wesleyyy@gmail.com)
+Wesley Dourado de Oliveira  
+📧 Email: [a30wesleyyy@gmail.com](mailto:a30wesleyyy@gmail.com)  
 🔗 GitHub: [https://github.com/WesleyDouradoDeOliveira](https://github.com/WesleyDouradoDeOliveira)
