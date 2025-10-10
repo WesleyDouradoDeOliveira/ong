@@ -3,27 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cadastro de voluntário">
-    <title>ONG Plataforma - Cadastro</title>
+    <meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
+
+    <title>ONG Plataforma - Home</title>
+
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS de máscara -->
     <script src="js/mascara.js" defer></script>
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
-                <img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" class="logo" width="200">
-        <nav>
-            <ul>
+        <div class="logo">
+            <img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" width="200">
+        </div>
+
+        <!-- Menu hambúrguer -->
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-list">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul class="nav-list" id="nav-list" role="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li>
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="dropdown" role="menu">
+                        <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                        <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
         <section>
             <h1>Cadastro de Voluntário</h1>
-            <form id="cadastro" action="#" method="post">
+            <p>Preencha o formulário abaixo para se cadastrar como voluntário e fazer parte da nossa rede de solidariedade.</p>
+
+            <!-- ALERTA -->
+            <div id="alert" class="alert" role="alert" style="display:none; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; margin-bottom: 20px;">
+                Cadastro realizado com sucesso!
+            </div>
+
+            <form id="cadastro" class="card" action="#" method="post">
                 <fieldset>
                     <legend>Dados Pessoais</legend>
 
@@ -61,13 +98,60 @@
                         <!-- mais estados -->
                     </select>
                 </fieldset>
-                <button type="submit">Enviar Cadastro</button>
+
+                <button type="submit" class="btn-primary">Enviar Cadastro</button>
             </form>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
+
+    <!-- Scripts -->
+    <script src="js/menu.js"></script>
+
+    <!-- Script do alerta -->
+    <script>
+        document.querySelector("#cadastro").addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("alert").style.display = "block";
+            // Opcional: esconder alerta após alguns segundos
+            setTimeout(function(){
+                document.getElementById("alert").style.display = "none";
+            }, 5000);
+        });
+    </script>
+<!-- Modal de feedback -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Cadastro enviado com sucesso!</p>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("cadastro");
+    const modal = document.getElementById("modal");
+    const closeModal = document.querySelector(".close");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Exibe o modal
+        modal.style.display = "flex";
+    });
+
+    // Fecha o modal ao clicar no "x"
+    closeModal.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // Fecha o modal ao clicar fora do conteúdo
+    window.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
