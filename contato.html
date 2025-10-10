@@ -16,6 +16,64 @@
 
     <!-- JS de máscara -->
     <script src="js/mascara.js" defer></script>
+
+    <style>
+        /* Centralização e responsividade do formulário igual ao cadastro */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 15px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button.btn-primary {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button.btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsivo para celular */
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -32,41 +90,35 @@
             <span></span>
         </div>
 
-        <nav>
+        <nav aria-label="Menu principal">
             <ul class="nav-list" id="nav-list" role="menu">
-
                 <li><a href="index.html">Home</a></li>
                 <li>
                     <a href="projetos.html">Projetos</a>
-<ul class="dropdown">
-    <li><a href="projeto1.html">Projeto 1</a></li>
-    <li><a href="projeto2.html">Projeto 2</a></li>
-</ul>
-
+                    <ul class="dropdown" role="menu">
+                        <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                        <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+                    </ul>
                 </li>
                 <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="container">
-        <section>
-            <h1>Contato</h1>
-            <p>Entre em contato conosco para mais informações ou dúvidas.</p>
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="main-container">
+            <section>
+                <h1>Contato</h1>
+                <p>Entre em contato conosco para mais informações ou dúvidas.</p>
 
-            <article class="card">
-                <h2>Informações de Contato</h2>
-                <p><strong>Email:</strong> <a href="mailto:contato@ongplataforma.com.br">contato@ongplataforma.com.br</a></p>
-                <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-                <p><strong>Endereço:</strong> Rua Exemplo, 123 - São Paulo, SP</p>
-                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ongplataforma" target="_blank">@ongplataforma</a></p>
-            </article>
+                <!-- ALERTA -->
+                <div id="alert-contato" class="alert" role="alert">
+                    Mensagem enviada com sucesso!
+                </div>
 
-            <article class="card">
-                <h2>Formulário de Contato</h2>
-                <form id="form-contato" action="#" method="post">
+                <form id="form-contato" class="card" action="#" method="post">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" required>
 
@@ -76,10 +128,10 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-                    <button type="submit">Enviar Mensagem</button>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
                 </form>
-            </article>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Rodapé -->
@@ -87,7 +139,22 @@
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- JS Menu -->
+    <!-- Script do menu -->
     <script src="js/menu.js"></script>
+
+    <!-- Script de confirmação -->
+    <script>
+        document.querySelector("#form-contato").addEventListener("submit", function(e) {
+            e.preventDefault(); // impede envio real
+            const alertBox = document.getElementById("alert-contato");
+            alertBox.style.display = "block";
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 4000);
+
+            // limpa o formulário após envio
+            e.target.reset();
+        });
+    </script>
 </body>
 </html>
