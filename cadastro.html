@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
 
-    <title>ONG Plataforma - Home</title>
+    <title>ONG Plataforma - Cadastro</title>
 
     <!-- CSS Modular -->
     <link rel="stylesheet" href="css/variables.css">
@@ -16,6 +16,80 @@
 
     <!-- JS de máscara -->
     <script src="js/mascara.js" defer></script>
+
+    <style>
+        /* Centralização e responsividade do formulário */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 15px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        form fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button.btn-primary {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button.btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Alerta de sucesso */
+        .alert {
+            display: none;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Responsivo para celular */
+        @media (max-width: 600px) {
+            .main-container {
+                padding: 20px;
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -42,66 +116,66 @@
                         <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
                     </ul>
                 </li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="cadastro.html" class="active">Cadastro</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-
     <!-- Conteúdo principal -->
-    <main class="container">
-        <section>
-            <h1>Cadastro de Voluntário</h1>
-            <p>Preencha o formulário abaixo para se cadastrar como voluntário e fazer parte da nossa rede de solidariedade.</p>
+    <main>
+        <div class="main-container">
+            <section>
+                <h1>Cadastro de Voluntário</h1>
+                <p>Preencha o formulário abaixo para se cadastrar como voluntário e fazer parte da nossa rede de solidariedade.</p>
 
-            <!-- ALERTA -->
-            <div id="alert" class="alert" role="alert" style="display:none; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; margin-bottom: 20px;">
-                Cadastro realizado com sucesso!
-            </div>
+                <!-- ALERTA -->
+                <div id="alert" class="alert" role="alert">
+                    Cadastro realizado com sucesso!
+                </div>
 
-            <form id="cadastro" class="card" action="#" method="post">
-                <fieldset>
-                    <legend>Dados Pessoais</legend>
+                <form id="cadastro" class="card" action="#" method="post">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
 
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
 
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" maxlength="14" required>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" maxlength="14" required>
 
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" maxlength="15" required>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" maxlength="15" required>
 
-                    <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="date" id="nascimento" name="nascimento" required>
 
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required>
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" required>
 
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" maxlength="9" required>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" maxlength="9" required>
 
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
 
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado" required>
-                        <option value="">Selecione</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <!-- mais estados -->
-                    </select>
-                </fieldset>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </select>
+                    </fieldset>
 
-                <button type="submit" class="btn-primary">Enviar Cadastro</button>
-            </form>
-        </section>
+                    <button type="submit" class="btn-primary">Enviar Cadastro</button>
+                </form>
+            </section>
+        </div>
     </main>
 
     <!-- Rodapé -->
@@ -109,49 +183,23 @@
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Script do menu -->
     <script src="js/menu.js"></script>
 
-    <!-- Script do alerta -->
+    <!-- Script de confirmação -->
     <script>
         document.querySelector("#cadastro").addEventListener("submit", function(e) {
-            e.preventDefault();
-            document.getElementById("alert").style.display = "block";
-            // Opcional: esconder alerta após alguns segundos
-            setTimeout(function(){
-                document.getElementById("alert").style.display = "none";
-            }, 5000);
+            e.preventDefault(); // impede envio real
+            const alertBox = document.getElementById("alert");
+            alertBox.style.display = "block";
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 4000);
+
+            // limpa o formulário após envio
+            e.target.reset();
         });
     </script>
-<!-- Modal de feedback -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Cadastro enviado com sucesso!</p>
-    </div>
-</div>
 
-<script>
-    const form = document.getElementById("cadastro");
-    const modal = document.getElementById("modal");
-    const closeModal = document.querySelector(".close");
-
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        // Exibe o modal
-        modal.style.display = "flex";
-    });
-
-    // Fecha o modal ao clicar no "x"
-    closeModal.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    // Fecha o modal ao clicar fora do conteúdo
-    window.addEventListener("click", function(e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-</script>
+</body>
+</html>
