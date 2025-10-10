@@ -27,49 +27,26 @@
 }
 
 /* =================== Layout Principal (Grid) =================== */
-.container {
+.container, .main-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-3);
-}
-
-/* =================== Container Principal =================== */
-.main-container {
-    max-width: 1200px; /* limite no desktop */
-    margin: 0 auto;    /* centraliza horizontalmente */
-    padding: 0 16px;   /* espaçamento interno nas laterais */
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-3);
-    box-sizing: border-box;
-}
-
-/* Cards e Formulários dentro do container */
-form, .card {
-    width: 100%;      /* ocupa toda a largura disponível */
-    max-width: 600px; /* largura máxima para leitura confortável */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: var(--space-3);
+    padding: 0 16px;
     box-sizing: border-box;
 }
 
-/* =================== Flexbox =================== */
-nav ul {
-    display: flex;
-    gap: var(--space-3);
-}
-
-nav li ul {
-    display: flex;
-    flex-direction: column;
-}
-
-/* =================== Cards =================== */
-.card {
+/* =================== Cards e Formulários =================== */
+.card, form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* centraliza */
+    padding: var(--space-3);
     background: var(--color-white);
     border-radius: 8px;
-    padding: var(--space-3);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -78,16 +55,87 @@ nav li ul {
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* =================== Formulários =================== */
-form {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    background: var(--color-white);
+/* =================== Fieldset e Legend =================== */
+fieldset {
+    border: 1px solid var(--color-neutral);
     padding: var(--space-3);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    box-sizing: border-box;
+    margin-bottom: var(--space-3);
 }
 
-/* resto do CSS continua normalmente... */
+legend {
+    font-weight: bold;
+    font-size: var(--font-size-md);
+}
+
+/* =================== Labels e Inputs =================== */
+label {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-dark);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: var(--space-2);
+    margin-top: var(--space-1);
+    border: 1px solid var(--color-neutral);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 8px rgba(42,157,143,0.3);
+}
+
+/* =================== Botões =================== */
+button {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: var(--space-2) var(--space-3);
+    margin-top: var(--space-3);
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: var(--font-size-md);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* =================== Responsividade =================== */
+@media (max-width: 768px) {
+    .card, form {
+        width: 95%;
+        padding: var(--space-2);
+        margin: 0 auto;
+    }
+    input, select, textarea, button {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 576px) {
+    .card, form {
+        width: 98%;
+        padding: var(--space-2);
+    }
+    input, select, textarea, button {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 400px) {
+    .card, form {
+        width: 100%;
+        padding: var(--space-2);
+    }
+}
