@@ -6,6 +6,7 @@ Este projeto é uma plataforma web para ONGs, desenvolvido como parte da discipl
 
 ## Estrutura do Projeto
 
+```
 projeto-ong/
 │
 ├── index.html
@@ -13,17 +14,18 @@ projeto-ong/
 ├── cadastro.html
 │
 ├── css/
-│ └── style.css
+│   └── style.css
 │
 ├── js/
-│ └── mascara.js
+│   └── mascara.js
 │
 ├── imagens/
-│ ├── Ong.jpeg
-│ ├── Escola.jpeg
-│ └── voluntarios.png
+│   ├── Ong.jpeg
+│   ├── Escola.jpeg
+│   └── voluntarios.png
 │
 └── README.md
+```
 
 ## Funcionalidades
 
