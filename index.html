@@ -3,36 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma para ONGs - Gestão de projetos e voluntariado">
+    <meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
+
     <title>ONG Plataforma - Home</title>
+
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS de máscara -->
+    <script src="js/mascara.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" class="logo" width="200">
 
-        <nav>
-            <ul>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" width="200">
+        </div>
+
+        <!-- Menu hambúrguer -->
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-list">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul class="nav-list" id="nav-list" role="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li>
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="dropdown" role="menu">
+                        <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                        <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <section class="col-6">
             <h1>Bem-vindo à ONG Plataforma</h1>
             <p>Nossa missão é conectar ONGs, voluntários e doadores em um ambiente digital completo e acessível.</p>
+        </section>
+
+        <section class="col-6">
             <img src="imagens/voluntarios.png" alt="Voluntários trabalhando">
         </section>
 
-        <section>
+        <section class="col-4">
             <h2>Sobre Nós</h2>
             <p>Somos uma plataforma dedicada a apoiar organizações do terceiro setor, oferecendo recursos digitais para engajamento e captação de recursos.</p>
         </section>
 
-        <section>
+        <section class="col-8">
             <h2>Contato</h2>
             <p>Email: <a href="mailto:contato@ongplataforma.com.br">contato@ongplataforma.com.br</a></p>
             <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
@@ -41,8 +73,12 @@
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- JS Menu -->
+    <script src="js/menu.js"></script>
 </body>
 </html>
