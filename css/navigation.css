@@ -1,6 +1,6 @@
 /* ====== CABEÇALHO ====== */
 header {
-    background: var(--color-primary, #2e8b57); /* verde principal */
+    background: var(--color-primary, #2e8b57);
     color: var(--color-white, #fff);
     display: flex;
     align-items: center;
@@ -114,11 +114,15 @@ nav a.active {
         position: relative;
     }
 
+    /* Dropdown fica embaixo do item e empurra os outros */
     .dropdown {
         position: static;
         background-color: var(--color-primary, #2e8b57);
         border-radius: 0;
         box-shadow: none;
+        display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
     .dropdown li a {
@@ -128,6 +132,5 @@ nav a.active {
 
     .has-dropdown.open > .dropdown {
         display: flex;
-        flex-direction: column;
     }
 }
