@@ -16,10 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdownLinks.forEach(link => {
         link.addEventListener("click", (e) => {
             const submenu = link.nextElementSibling;
-
-            // Só bloqueia o clique se for mobile e houver submenu
             if (submenu && submenu.tagName === "UL" && window.innerWidth <= 768) {
-                e.preventDefault(); // Evita abrir página no mobile
+                e.preventDefault(); // evita abrir página no mobile
                 submenu.classList.toggle("active");
             }
         });
@@ -30,26 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const telefone = document.getElementById("telefone");
     const cep = document.getElementById("cep");
 
-    const formatCPF = (value) => {
-        value = value.replace(/\D/g, "");
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d)/, "$1.$2");
-        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-        return value;
-    };
+    const formatCPF = value => value.replace(/\D/g, "")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d)/, "$1.$2")
+        .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
-    const formatTelefone = (value) => {
-        value = value.replace(/\D/g, "");
-        value = value.replace(/^(\d{2})(\d)/, "($1) $2");
-        value = value.replace(/(\d{4,5})(\d{4})$/, "$1-$2");
-        return value;
-    };
+    const formatTelefone = value => value.replace(/\D/g, "")
+        .replace(/^(\d{2})(\d)/, "($1) $2")
+        .replace(/(\d{4,5})(\d{4})$/, "$1-$2");
 
-    const formatCEP = (value) => {
-        value = value.replace(/\D/g, "");
-        value = value.replace(/(\d{5})(\d)/, "$1-$2");
-        return value;
-    };
+    const formatCEP = value => value.replace(/\D/g, "")
+        .replace(/(\d{5})(\d)/, "$1-$2");
 
     if (cpf) cpf.addEventListener("input", () => cpf.value = formatCPF(cpf.value));
     if (telefone) telefone.addEventListener("input", () => telefone.value = formatTelefone(telefone.value));
@@ -61,25 +50,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModal = modal.querySelector(".close");
     const alertBox = document.getElementById("alert");
 
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // impede envio real
 
-        // Mostrar alerta
-        if (alertBox) {
-            alertBox.style.display = "block";
-            setTimeout(() => {
-                alertBox.style.display = "none";
-            }, 5000);
-        }
+            // Mostra alerta apenas ao enviar
+            if (alertBox) {
+                alertBox.style.display = "block";
+                setTimeout(() => alertBox.style.display = "none", 5000);
+            }
 
-        // Mostrar modal
-        if (modal) modal.style.display = "flex";
-    });
+            // Mostra modal apenas ao enviar
+            if (modal) modal.style.display = "flex";
+
+            form.reset(); // opcional: limpa os campos após envio
+        });
+    }
 
     // Fechar modal ao clicar no X
-    if (closeModal) closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+    if (closeModal) {
+        closeModal.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    }
 
     // Fechar modal ao clicar fora do conteúdo
     window.addEventListener("click", (e) => {
