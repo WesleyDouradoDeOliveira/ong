@@ -9,30 +9,82 @@ footer {
 }
 
 /* =================== Breakpoints Responsivos =================== */
+
+/* Large desktops */
 @media (max-width: 1200px) {
     .container {
         grid-template-columns: repeat(8, 1fr);
     }
 }
 
+/* Medium desktops / small laptops */
 @media (max-width: 992px) {
     .container {
         grid-template-columns: repeat(6, 1fr);
     }
+
+    /* Navbar menu hambúrguer */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* só aparece com .active */
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li ul {
+        padding-left: var(--space-3);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(4, 1fr);
     }
-}
 
-@media (max-width: 576px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
+    /* Cards e Forms menores */
+    .card, form {
+        width: 95%;
+        padding: var(--space-2);
+    }
+
+    input, select, textarea, button {
+        font-size: var(--font-size-sm);
     }
 }
 
+/* Celulares maiores */
+@media (max-width: 576px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2);
+    }
+
+    .card {
+        width: 100%;
+        padding: var(--space-2);
+        box-sizing: border-box;
+    }
+
+    form {
+        width: 95%;
+        padding: var(--space-2);
+        margin: auto;
+    }
+
+    input, select, textarea, button {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Celulares pequenos */
 @media (max-width: 400px) {
     .container {
         grid-template-columns: 1fr;
