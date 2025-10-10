@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
-
     <title>ONG Plataforma - Home</title>
 
     <!-- CSS Modular -->
@@ -18,7 +17,6 @@
     <script src="js/mascara.js" defer></script>
 </head>
 <body>
-
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
@@ -32,33 +30,35 @@
             <span></span>
         </div>
 
-<nav aria-label="Menu principal">
-    <ul class="nav-list" id="nav-list" role="menu">
-        <li><a href="index.html">Home</a></li>
-        <li class="has-dropdown">
-            <a href="projetos.html">Projetos</a>
-            <ul class="dropdown" role="menu">
-                <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
-                <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+        <nav aria-label="Menu principal">
+            <ul class="nav-list" id="nav-list" role="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="dropdown" role="menu">
+                        <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                        <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
-        </li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-        <li><a href="contato.html">Contato</a></li>
-    </ul>
-</nav>
+        </nav>
     </header>
 
     <!-- Conteúdo Principal -->
     <main class="container">
+        <!-- Linha 1: Boas-vindas + imagem -->
         <section class="col-6">
             <h1>Bem-vindo à ONG Plataforma</h1>
             <p>Nossa missão é conectar ONGs, voluntários e doadores em um ambiente digital completo e acessível.</p>
         </section>
 
         <section class="col-6">
-            <img src="imagens/voluntarios.png" alt="Voluntários trabalhando">
+            <img src="imagens/voluntarios.png" alt="Voluntários trabalhando" style="width:100%;">
         </section>
 
+        <!-- Linha 2: Sobre + Contato -->
         <section class="col-4">
             <h2>Sobre Nós</h2>
             <p>Somos uma plataforma dedicada a apoiar organizações do terceiro setor, oferecendo recursos digitais para engajamento e captação de recursos.</p>
@@ -74,7 +74,7 @@
     </main>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="col-12">
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
 
