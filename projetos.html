@@ -25,22 +25,20 @@
         </div>
 
         <!-- Menu hambúrguer -->
-<div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-list">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-list">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <nav>
-            <ul class="nav-list" id="nav-list" role="menu">
-
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Projetos</a>
+                <li class="has-dropdown">
+                    <a href="#" data-page="projetos">Projetos</a>
                     <ul class="dropdown">
-                        <li><a href="projeto1.html">Projeto 1</a></li>
-                        <li><a href="projeto2.html">Projeto 2</a></li>
+                        <li><a href="#" data-page="projeto1">Projeto 1</a></li>
+                        <li><a href="#" data-page="projeto2">Projeto 2</a></li>
                     </ul>
                 </li>
                 <li><a href="cadastro.html">Cadastro</a></li>
@@ -54,18 +52,20 @@
         <section>
             <h1>Projetos Sociais</h1>
 
+            <!-- Projeto 1 -->
             <article class="card">
-                <h2>Projeto de Apoio Escolar</h2>
+                <h2>Projeto de Apoio Escolar <span class="badge">Educação</span></h2>
                 <p>Oferecemos reforço escolar para crianças em situação de vulnerabilidade.</p>
                 <img src="imagens/Escola.jpeg" alt="Crianças estudando" width="600">
-                <p><a href="projeto1.html">Saiba mais</a></p>
+                <p><a href="#" data-page="projeto1">Saiba mais</a></p>
             </article>
 
+            <!-- Projeto 2 -->
             <article class="card">
-                <h2>Voluntariado Ambiental</h2>
+                <h2>Voluntariado Ambiental <span class="badge">Meio Ambiente</span></h2>
                 <p>Projeto dedicado à preservação ambiental e conscientização ecológica.</p>
                 <img src="imagens/voluntario.jpeg" alt="Voluntariado Ambiental" width="600">
-                <p><a href="projeto2.html">Saiba mais</a></p>
+                <p><a href="#" data-page="projeto2">Saiba mais</a></p>
             </article>
         </section>
     </main>
@@ -75,7 +75,13 @@
         <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- JS Menu -->
+    <!-- Scripts JS -->
     <script src="js/menu.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/formMasks.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/spa.js"></script>
+    <script src="js/templates.js"></script>
+
 </body>
 </html>
