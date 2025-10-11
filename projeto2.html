@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
-
-    <title>ONG Plataforma - Home</title>
+    <title>ONG Plataforma - Projeto 2</title>
 
     <!-- CSS Modular -->
     <link rel="stylesheet" href="css/variables.css">
@@ -32,43 +31,53 @@
             <span></span>
         </div>
 
-        <nav aria-label="Menu principal">
-            <ul class="nav-list" id="nav-list" role="menu">
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="projetos.html">Projetos</a>
-                    <ul class="dropdown" role="menu">
-                        <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
-                        <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="contato.html">Contato</a></li>
+<nav aria-label="Menu principal">
+    <ul class="nav-list" id="nav-list" role="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+            <a href="projetos.html">Projetos</a>
+            <ul class="dropdown" role="menu">
+                <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
             </ul>
-        </nav>
+        </li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
     </header>
 
+    <!-- Conteúdo do Projeto 2 -->
+    <section>
+        <h1>Voluntariado Ambiental <span class="badge">Meio Ambiente</span></h1>
+        <p>
+            Nosso projeto busca preservar o meio ambiente e conscientizar a comunidade sobre práticas sustentáveis.
+            Realizamos ações como limpeza de áreas verdes, plantio de árvores e oficinas educativas sobre reciclagem.
+        </p>
 
-<section>
-    <h1>Voluntariado Ambiental <span class="badge">Meio Ambiente</span></h1>
-    <p>
-        Nosso projeto busca preservar o meio ambiente e conscientizar a comunidade sobre práticas sustentáveis.
-        Realizamos ações como limpeza de áreas verdes, plantio de árvores e oficinas educativas sobre reciclagem.
-    </p>
+        <h2>Objetivos</h2>
+        <ul>
+            <li>Preservar áreas verdes</li>
+            <li>Educar sobre sustentabilidade</li>
+            <li>Promover ações comunitárias</li>
+        </ul>
 
-    <h2>Objetivos</h2>
-    <ul>
-        <li>Preservar áreas verdes</li>
-        <li>Educar sobre sustentabilidade</li>
-        <li>Promover ações comunitárias</li>
-    </ul>
+        <h2>Atividades</h2>
+        <p>
+            Organizamos mutirões de limpeza, palestras educativas, plantio de mudas e atividades lúdicas para crianças
+            e adolescentes, incentivando a consciência ambiental desde cedo.
+        </p>
 
-    <h2>Atividades</h2>
-    <p>
-        Organizamos mutirões de limpeza, palestras educativas, plantio de mudas e atividades lúdicas para crianças
-        e adolescentes, incentivando a consciência ambiental desde cedo.
-    </p>
+        <img src="imagens/voluntario.jpeg" alt="Voluntariado Ambiental" width="800">
+    </section>
 
-    <img src="imagens/voluntario.jpeg" alt="Voluntariado Ambiental" width="800">
-</section>
+    <!-- Scripts JS -->
+    <script src="js/menu.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/formMasks.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/spa.js"></script>
+    <script src="js/templates.js"></script>
 
+</body>
+</html>
