@@ -7,6 +7,7 @@ header {
     justify-content: space-between;
     padding: 16px 32px;
     position: relative;
+    z-index: 100; /* garante que o header fique acima de tudo */
 }
 
 header .logo img {
@@ -81,6 +82,7 @@ nav a.active {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    z-index: 9999; /* prioridade máxima no clique */
 }
 
 .menu-toggle span {
@@ -98,6 +100,9 @@ nav a.active {
         background-color: var(--color-primary, #2e8b57);
         width: 100%;
         padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     nav ul.active {
@@ -133,4 +138,19 @@ nav a.active {
     .has-dropdown.open > .dropdown {
         display: flex;
     }
+}
+
+/* ====== AJUSTE DE Z-INDEX PARA CORRIGIR CLIQUES NO MOBILE ====== */
+#mobile-menu {
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+.nav-list {
+  z-index: 9998 !important;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
