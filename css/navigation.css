@@ -78,11 +78,11 @@ nav a.active {
 
 /* ====== MENU HAMBÚRGUER ====== */
 .menu-toggle {
-    display: none;
+    display: none; /* aparece só no mobile */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    z-index: 9999; /* prioridade máxima no clique */
+    z-index: 9999;
 }
 
 .menu-toggle span {
@@ -94,19 +94,19 @@ nav a.active {
 
 /* ====== RESPONSIVIDADE ====== */
 @media (max-width: 768px) {
-    nav ul {
+    #nav-list {
         display: none;
         flex-direction: column;
-        background-color: var(--color-primary, #2e8b57);
+        background-color: var(--color-primary);
         width: 100%;
-        padding: 10px 0;
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 9998;
     }
 
-    nav ul.active {
-        display: flex;
+    #nav-list.active {
+        display: flex; /* mostra menu quando clicado */
     }
 
     .menu-toggle {
@@ -114,31 +114,31 @@ nav a.active {
     }
 
     nav ul li {
-        text-align: center;
         width: 100%;
-        position: relative;
+        text-align: center;
     }
 
-    /* Dropdown fica embaixo do item e empurra os outros */
+    /* Dropdown no mobile */
     .dropdown {
-        position: static;
-        background-color: var(--color-primary, #2e8b57);
-        border-radius: 0;
-        box-shadow: none;
         display: none;
         flex-direction: column;
         width: 100%;
+        position: static; /* empurra itens abaixo */
+        background-color: var(--color-primary);
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .dropdown li a {
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: 1px solid rgba(255,255,255,0.15);
         padding: 12px 0;
     }
 
     .has-dropdown.open > .dropdown {
-        display: flex;
+        display: flex; /* abre dropdown quando .open */
     }
 }
+
 
 /* ====== AJUSTE DE Z-INDEX PARA CORRIGIR CLIQUES NO MOBILE ====== */
 #mobile-menu {
