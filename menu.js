@@ -5,22 +5,23 @@ function initMenu() {
 
     if (!menuToggle || !navList) return;
 
-    // Evita duplicar evento
-    menuToggle.onclick = () => {
-        navList.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-    };
+    // Abrir/fechar menu mobile
+menuToggle.onclick = () => {
+    navList.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+};
 
+
+    // Dropdown no mobile
     dropdownLinks.forEach(link => {
         link.onclick = e => {
             const submenu = link.nextElementSibling;
             if (submenu && submenu.tagName === "UL" && window.innerWidth <= 768) {
-                e.preventDefault();
-                submenu.classList.toggle("active");
+                e.preventDefault(); // evita abrir página
+                link.parentElement.classList.toggle("open"); // aqui usamos .open para combinar com CSS
             }
         };
     });
 }
 
-// Inicializa o menu ao abrir o site
 document.addEventListener("DOMContentLoaded", initMenu);
