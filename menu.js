@@ -6,11 +6,10 @@ function initMenu() {
     if (!menuToggle || !navList) return;
 
     // Abrir/fechar menu mobile
-menuToggle.onclick = () => {
-    navList.classList.toggle("active");
-    menuToggle.classList.toggle("active");
-};
-
+    menuToggle.onclick = () => {
+        navList.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+    };
 
     // Dropdown no mobile
     dropdownLinks.forEach(link => {
@@ -18,7 +17,7 @@ menuToggle.onclick = () => {
             const submenu = link.nextElementSibling;
             if (submenu && submenu.tagName === "UL" && window.innerWidth <= 768) {
                 e.preventDefault(); // evita abrir página
-                link.parentElement.classList.toggle("open"); // aqui usamos .open para combinar com CSS
+                link.parentElement.classList.toggle("open"); // usa .open para CSS
             }
         };
     });
