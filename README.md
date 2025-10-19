@@ -15,9 +15,10 @@ Navegação responsiva com menu hamburguer e dropdowns;
 
 Implementação de práticas de acessibilidade e otimização.
 
-Estrutura do Projeto
-pdf.set_font("Courier", '', 12)
-estrutura = """plataforma-ong/
+## Estrutura do Projeto
+
+```text
+plataforma-ong/
 │
 ├── index.html
 ├── projetos.html
@@ -46,8 +47,6 @@ estrutura = """plataforma-ong/
 │
 ├── README.md
 └── LICENSE
-"""
-pdf.multi_cell(0, 6, estrutura)
 
 
 Funcionalidades
