@@ -112,7 +112,7 @@ Como Executar
 
 Clone o repositório:
 
-git clone https://github.com/WesleyDouradoDeOliveira/plataforma-ong.git
+git clone https://github.com/WesleyDouradoDeOliveira/ong
 
 
 Abra index.html em qualquer navegador moderno.
