@@ -21,14 +21,17 @@ header {
     background-color: #4CAF50;
 }
 
-.logo img { height: 50px; }
+.logo img {
+    width: 200px; /* largura maior */
+    height: auto; /* mantém a proporção */
+}
 
 nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* verde uniforme */
 }
 
 nav ul li a {
@@ -69,6 +72,25 @@ nav ul li.has-dropdown:hover .dropdown { display: flex; }
     nav ul li .dropdown { position: static; display: none; flex-direction: column; }
     nav ul li .dropdown li a { padding-left: 30px; }
 }
+section {
+    max-width: 800px;      /* define a largura do bloco */
+    margin: 0 auto;        /* centraliza o bloco horizontalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;             /* espaço entre título, parágrafo e imagem */
+    padding: 40px 20px;
+}
+
+section img {
+    align-self: center;    /* centraliza somente a imagem dentro do bloco */
+    max-width: 100%;       /* imagem responsiva */
+    height: auto;
+}
+
+section h1, section p {
+    text-align: left;      /* texto alinhado à esquerda */
+}
+
 </style>
 </head>
 <body>
