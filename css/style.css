@@ -3,13 +3,13 @@
     --color-primary: #0a9396;
     --color-secondary: #94d2bd;
     --color-accent: #ee9b00;
-    --color-dark: #005f73;
+    --color-dark:  #4CAF50; /* verde */
     --color-light: #f5f5f5;
     --color-neutral: #cccccc;
     --color-white: #ffffff;
     --color-error: #e63946;
     --color-success: #2a9d8f;
-    --color-info: #3d5a80;
+    --color-info:  #4CAF50; /* verde */
 
     --font-base: Arial, sans-serif;
     --font-size-xs: 0.75rem;
@@ -222,7 +222,7 @@ button:disabled {
 footer {
     text-align: center;
     padding: var(--space-2);
-    background: var(--color-dark);
+    background: #4CAF50; /* verde */
     color: var(--color-white);
     margin-top: var(--space-5);
     font-size: var(--font-size-sm);
@@ -268,4 +268,8 @@ img {
 @media (max-width: 400px) {
     .container { grid-template-columns: 1fr; }
     .card, form { width: 100%; padding: var(--space-2); margin: 0 auto; box-sizing: border-box; }
+}
+main section h1,
+main section h2 {
+    color: #4CAF50;
 }
