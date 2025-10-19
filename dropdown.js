@@ -1,7 +1,1 @@
-<li class="has-dropdown">
-    <a href="#" data-page="projetos">Projetos</a>
-    <ul class="dropdown">
-        <li><a href="#" data-page="projeto1">Projeto 1</a></li>
-        <li><a href="#" data-page="projeto2">Projeto 2</a></li>
-    </ul>
-</li>
+document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("dark-mode-toggle");if(!e)return;"enabled"===localStorage.getItem("dark-mode")&&document.body.classList.add("dark-mode"),e.addEventListener("click",()=>{document.body.classList.toggle("dark-mode"),document.body.classList.contains("dark-mode")?localStorage.setItem("dark-mode","enabled"):localStorage.setItem("dark-mode","disabled")})});
