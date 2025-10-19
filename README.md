@@ -1,54 +1,125 @@
-# Plataforma ONG - Experiência Prática I
+Plataforma ONG - Experiência Prática IV
+Descrição do Projeto
 
-## Descrição
+Este projeto é uma plataforma web completa para ONGs, desenvolvida como parte da disciplina Fundamentos da Web e Estruturação de Interfaces, consolidando práticas profissionais de versionamento, acessibilidade e otimização para produção.
 
-Este projeto é uma plataforma web para ONGs, desenvolvido como parte da disciplina *Fundamentos da Web e Estruturação de Interfaces*. A plataforma oferece informações institucionais, projetos sociais, cadastro de voluntários e facilita o engajamento entre ONGs, voluntários e doadores.
+A plataforma permite que ONGs, voluntários e doadores interajam em um ambiente digital seguro e acessível, oferecendo:
 
-## Estrutura do Projeto
+Página inicial com missão, visão e valores;
 
-```
-projeto-ong/
+Listagem de projetos sociais com descrição, imagens e badges;
+
+Cadastro de voluntários com validação de formulário;
+
+Navegação responsiva com menu hamburguer e dropdowns;
+
+Implementação de práticas de acessibilidade e otimização.
+
+Estrutura do Projeto
+plataforma-ong/
 │
 ├── index.html
 ├── projetos.html
+├── projeto1.html
+├── projeto2.html
 ├── cadastro.html
+├── contato.html
 │
 ├── css/
+│   ├── variables.css
+│   ├── layout.css
+│   ├── navigation.css
+│   ├── components.css
 │   └── style.css
 │
 ├── js/
-│   └── mascara.js
+│   ├── spa.js
+│   ├── menu.js
+│   └── utils.js
 │
 ├── imagens/
 │   ├── Ong.jpeg
 │   ├── Escola.jpeg
+│   ├── voluntario.jpeg
 │   └── voluntarios.png
 │
-└── README.md
-```
+├── README.md
+└── LICENSE
 
-## Funcionalidades
+Funcionalidades
 
-* Página inicial com missão, visão, valores e informações de contato.
-* Página de projetos sociais com descrição e imagens.
-* Página de cadastro com formulário HTML5, validação e máscaras de input para CPF, telefone e CEP.
-* Navegação responsiva entre páginas.
-* Layout limpo e acessível.
-* Interface estilizada com CSS3, utilizando **design system, grid e flexbox**, incluindo menu responsivo, cards para projetos, botões com estados visuais e formulários com validação.
+Navegação responsiva em desktop e mobile;
 
-## Tecnologias Utilizadas
+Menu dropdown e menu hamburguer com acessibilidade (Tab, Enter, ARIA);
 
-* HTML5
-* CSS3
-* JavaScript
-* Git e GitHub
+Páginas de projetos com cards, imagens e badges de categoria;
 
-## Como Visualizar
+Formulário de cadastro com validação de campos e máscaras de input (CPF, telefone, CEP);
 
-Abra `index.html` no navegador.
+Estrutura semântica HTML5: <header>, <main>, <section>, <footer>;
 
-## Autor
+Compatibilidade com leitores de tela e contraste adequado (mínimo 4.5:1);
 
-Wesley Dourado de Oliveira  
-📧 Email: [a30wesleyyy@gmail.com](mailto:a30wesleyyy@gmail.com)  
-🔗 GitHub: [https://github.com/WesleyDouradoDeOliveira](https://github.com/WesleyDouradoDeOliveira)
+Suporte a modo de alto contraste e dark mode acessível;
+
+Otimização para produção: minificação de CSS/JS/HTML, compressão de imagens.
+
+Tecnologias Utilizadas
+
+HTML5 – Estrutura semântica e conteúdo acessível;
+
+CSS3 – Grid, Flexbox, design system, responsividade e temas;
+
+JavaScript – SPA, manipulação do DOM e validação de formulários;
+
+Git & GitHub – Controle de versão com GitFlow, commits semânticos e releases;
+
+Ferramentas de otimização – Minificação e compressão de imagens.
+
+Versionamento (Git/GitHub)
+
+Branch principal: main – versão estável.
+
+Branch de desenvolvimento: develop.
+
+Branches de funcionalidades: feature/....
+
+Histórico de commits semântico, exemplo:
+
+feat(navbar): adicionar menu responsivo com dropdown
+
+fix(form): corrigir validação de CPF
+
+chore(images): otimizar imagens para produção
+
+Releases versionadas: v1.0.0, v1.1.0, etc.
+
+Issues e milestones documentando tarefas e bugs.
+
+Acessibilidade
+
+Navegação por teclado em todos os elementos interativos;
+
+Suporte completo a leitores de tela;
+
+Contraste mínimo de 4.5:1 para texto normal;
+
+Modo de alto contraste e dark mode acessível;
+
+Estrutura semântica adequada e ARIA em menus e formulários.
+
+Como Executar
+
+Clone o repositório:
+
+git clone https://github.com/WesleyDouradoDeOliveira/plataforma-ong.git
+
+
+Abra index.html em qualquer navegador moderno.
+
+Autor
+
+Wesley Dourado de Oliveira
+📧 Email: a30wesleyyy@gmail.com
+
+🔗 GitHub: https://github.com/WesleyDouradoDeOliveira
