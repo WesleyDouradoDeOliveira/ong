@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plataforma ONG - Conectando voluntários e projetos sociais para transformação comunitária.">
+<title>ONG Plataforma - Home</title>
+
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body { background-color: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* verde uniforme */
+    position: relative;
+}
+.logo img { height: 50px; }
+
+nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+nav ul li { position: relative; }
+nav ul li a { text-decoration: none; color: #fff; padding: 15px 20px; display: block; text-align: center; }
+nav ul li a:hover { background-color: #45A049; }
+
+nav ul li .dropdown { display: none; position: absolute; top: 100%; left: 0; background-color: #4CAF50; min-width: 150px; z-index: 1000; flex-direction: column; }
+nav ul li .dropdown li a { padding: 10px; color: #fff; text-align: left; }
+
+@media(min-width: 769px){ nav ul li.has-dropdown:hover > .dropdown { display: flex; } }
+
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.menu-toggle span { width: 25px; height: 3px; background-color: #fff; }
+
+@media(max-width: 768px){
+    .menu-toggle { display: flex; }
+    nav ul { display: none; flex-direction: column; width: 100%; background-color: #4CAF50; }
+    nav ul.active { display: flex; }
+    nav ul li .dropdown { position: static; display: none; flex-direction: column; }
+    nav ul li .dropdown li a { padding-left: 30px; }
+}
+
+main.container { padding: 40px 15px; max-width: 1000px; margin: 0 auto; }
+h1 { color: #4CAF50; }
+h2 { color: #4CAF50; }
+
+footer { text-align: center; padding: 20px; background-color: #4CAF50; color: #fff; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" width="200"></div>
+    <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
+    <nav>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dropdown">
+                <a href="projetos.html" class="dropdown-toggle">Projetos</a>
+                <ul class="dropdown">
+                    <li><a href="projeto1.html">Projeto 1</a></li>
+                    <li><a href="projeto2.html">Projeto 2</a></li>
+                </ul>
+            </li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="col-6">
+        <h1>Bem-vindo à ONG Plataforma</h1>
+        <p>Nossa missão é conectar ONGs, voluntários e doadores em um ambiente digital completo e acessível.</p>
+    </section>
+    <section class="col-6">
+        <img src="imagens/voluntarios.png" alt="Voluntários trabalhando" style="width:100%;">
+    </section>
+    <section class="col-4">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma plataforma dedicada a apoiar organizações do terceiro setor, oferecendo recursos digitais para engajamento e captação de recursos.</p>
+    </section>
+    <section class="col-8">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:contato@ongplataforma.com.br">contato@ongplataforma.com.br</a></p>
+        <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+        <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
+        <p>Instagram: <a href="https://www.instagram.com/ongplataforma" target="_blank">@ongplataforma</a></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 ONG Plataforma. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+menuToggle.addEventListener('click', () => { navList.classList.toggle('active'); });
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        if(window.innerWidth <= 768){
+            e.preventDefault();
+            const dropdown = toggle.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        }
+    });
+});
+</script>
+
+</body>
+</html>
