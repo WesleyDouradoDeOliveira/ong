@@ -16,35 +16,32 @@ Navegação responsiva com menu hamburguer e dropdowns;
 Implementação de práticas de acessibilidade e otimização.
 
 Estrutura do Projeto
+
 plataforma-ong/
-│
-├── index.html
-├── projetos.html
-├── projeto1.html
-├── projeto2.html
-├── cadastro.html
-├── contato.html
-│
-├── css/
-│   ├── variables.css
-│   ├── layout.css
-│   ├── navigation.css
-│   ├── components.css
-│   └── style.css
-│
-├── js/
-│   ├── spa.js
-│   ├── menu.js
-│   └── utils.js
-│
-├── imagens/
-│   ├── Ong.jpeg
-│   ├── Escola.jpeg
-│   ├── voluntario.jpeg
-│   └── voluntarios.png
-│
-├── README.md
-└── LICENSE
+- index.html
+- projetos.html
+- projeto1.html
+- projeto2.html
+- cadastro.html
+- contato.html
+- css/
+  - variables.css
+  - layout.css
+  - navigation.css
+  - components.css
+  - style.css
+- js/
+  - spa.js
+  - menu.js
+  - utils.js
+- imagens/
+  - Ong.jpeg
+  - Escola.jpeg
+  - voluntario.jpeg
+  - voluntarios.png
+- README.md
+- LICENSE
+
 
 Funcionalidades
 
