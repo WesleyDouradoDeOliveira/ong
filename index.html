@@ -57,21 +57,30 @@ footer { text-align: center; padding: 20px; background-color: #4CAF50; color: #f
 
 <header>
     <div class="logo"><img src="imagens/Ong.jpeg" alt="Logo da ONG Plataforma" width="200"></div>
-    <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
-    <nav>
-        <ul class="nav-list" id="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li class="has-dropdown">
-                <a href="projetos.html" class="dropdown-toggle">Projetos</a>
-                <ul class="dropdown">
-                    <li><a href="projeto1.html">Projeto 1</a></li>
-                    <li><a href="projeto2.html">Projeto 2</a></li>
-                </ul>
-            </li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+<div class="menu-toggle" id="mobile-menu" role="button"
+     aria-label="Abrir menu de navegação"
+     aria-expanded="false"
+     aria-controls="nav-list">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<nav aria-label="Menu principal">
+    <ul id="nav-list" role="menu">
+        <li role="menuitem"><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+            <a href="projetos.html" aria-haspopup="true" aria-expanded="false">Projetos</a>
+            <ul class="dropdown" role="menu">
+                <li role="menuitem"><a href="projeto1.html">Projeto 1</a></li>
+                <li role="menuitem"><a href="projeto2.html">Projeto 2</a></li>
+            </ul>
+        </li>
+        <li role="menuitem"><a href="cadastro.html">Cadastro</a></li>
+        <li role="menuitem"><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+
 </header>
 
 <main class="container">
