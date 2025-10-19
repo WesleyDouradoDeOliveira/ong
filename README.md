@@ -16,7 +16,8 @@ Navegação responsiva com menu hamburguer e dropdowns;
 Implementação de práticas de acessibilidade e otimização.
 
 Estrutura do Projeto
-plataforma-ong/
+pdf.set_font("Courier", '', 12)
+estrutura = """plataforma-ong/
 │
 ├── index.html
 ├── projetos.html
@@ -26,25 +27,28 @@ plataforma-ong/
 ├── contato.html
 │
 ├── css/
-│ ├── variables.css
-│ ├── layout.css
-│ ├── navigation.css
-│ ├── components.css
-│ └── style.css
+│   ├── variables.css
+│   ├── layout.css
+│   ├── navigation.css
+│   ├── components.css
+│   └── style.css
 │
 ├── js/
-│ ├── spa.js
-│ ├── menu.js
-│ └── utils.js
+│   ├── spa.js
+│   ├── menu.js
+│   └── utils.js
 │
 ├── imagens/
-│ ├── Ong.jpeg
-│ ├── Escola.jpeg
-│ ├── voluntario.jpeg
-│ └── voluntarios.png
+│   ├── Ong.jpeg
+│   ├── Escola.jpeg
+│   ├── voluntario.jpeg
+│   └── voluntarios.png
 │
 ├── README.md
 └── LICENSE
+"""
+pdf.multi_cell(0, 6, estrutura)
+
 
 Funcionalidades
 
